@@ -8,7 +8,7 @@ import holder4 from './img/holder4.jpg'
 import intro1 from './img/intro.jpg'
 import intro2 from './img/intro2.jpg'
 import intro3 from './img/intro3.jpg'
-import Motors from './Motors'
+
 
 import {
     Navbar,
@@ -22,8 +22,7 @@ import {
     CarouselInner,
     CarouselItem,
     CarouselCaption,
-    CarouselControl,
-    Footer
+    CarouselControl
 } from 'mdbreact'
 
 class App extends Component {
@@ -65,69 +64,37 @@ class App extends Component {
 
     render() {
         return (
-            <div>
-            <div className="Nav">
-                {/*<Navbar color="black" className="navbar-ht align-content-center mx-auto">*/}
-                    <div className="col-lg-3 text-left align-middle">
-                        <NavbarBrand tag="span" className="ml-4">
-                            <img src="http://gatortraxboats.com/wp-content/uploads/2016/11/mudbuddy.png"
-                                 alt="Mudbuddy Logo" className="logo"/>
-                        </NavbarBrand>
+
+            <div className="App">
+                <Navbar color="black" className="navbar-ht align-content-center mx-auto">
+                    <NavbarBrand tag="span" className="ml-4">
+                        <img src="http://gatortraxboats.com/wp-content/uploads/2016/11/mudbuddy.png"
+                             alt="Mudbuddy Logo" className="logo"/>
+                    </NavbarBrand>
+                    <div className="container">
+
+                        <Button color="grey" size='sm'>Home</Button>
+                        <Button color="grey" size='sm'>Dealers</Button>
+                        <Button color="grey" size='sm'>Motors</Button>
+                        <Button color="grey" size='sm'>Support/Parts</Button>
+                        <Button color="grey" size='sm'>Contact</Button>
+
                     </div>
-                <div className="d-inline-flex text-align-center mb-2">
 
-                    <h5 className="m-2">Home</h5>
-                    <h5 className="m-2">Dealers</h5>
-                    <h5 className="m-2">Motors</h5>
-                    <h5 className="m-2">Support/Parts</h5>
-                    <h5 className="m-2">Contact</h5>
-
-                </div>
-            </div>
-                {/*</Navbar>*/}
+                </Navbar>
                 <section>
 
-                    <Carousel
-                        activeItem={this.state.activeItem}
-                        next={this.next}
-                        className="z-depth-1">
-                        <CarouselInner>
-                            <CarouselItem itemId="1">
+                    <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/KKRq-AHhPT8?rel=0&amp;showinfo=0" frameBorder="0"
+                            allow="autoplay; encrypted-media" allowFullScreen>
 
-                                <div className="view hm-black-light">
-
-                                    <img className="d-block w-100" src={intro1} alt="First slide"/>
-
-                                </div>
-
-                            </CarouselItem>
-                            <CarouselItem itemId="2">
-                                <div className="view hm-black-strong">
-                                    <img className="d-block w-100" src={intro2} alt="First slide"/>
-
-                                </div>
-
-                            </CarouselItem>
-                        </CarouselInner>
-                        <CarouselItem itemId="3">
-                            <div className="view hm-black-light">
-                                <img className="d-block w-100" src={intro3} alt="First slide"/>
-                            </div>
-
-                        </CarouselItem>
-                        <CarouselControl direction="prev" role="button" onClick={() => {
-                            this.prev();
-                        }}/>
-                        <CarouselControl direction="next" role="button" onClick={() => {
-                            this.next();
-                        }}/>
-                    </Carousel>
+                    </iframe>
                 </section>
                 <div className="container">
-                    <div className="row mt-5">
+                    <div className="row">
                         <div className="col-lg-3 col-md-12 mb-4">
                             <CardBody className="mb-3">
-                                <img src={holder1} alt="HD HDR Reverse"/>
+                                <img src="http://www.mudbuddy.com/Rear-HDR4400.png" alt="HD HDR Reverse"/>
                             </CardBody>
                             <CardText className="text-justify">
                                 HD - Traditional Belt Drive with neutral and forward gears.
@@ -142,7 +109,7 @@ class App extends Component {
                             </CardText>
                         </div>
                         <div className="col-lg-3 col-md-12 ">
-                            <CardBody className="align-items-center">
+                            <CardBody>
                                 <img src={holder2} alt="Sport V"/>
                             </CardBody>
                             <CardText className="text-justify">
@@ -188,17 +155,11 @@ class App extends Component {
 
                     </div>
 
+                    <footer>
+
+                    </footer>
 
                 </div>
-                <Footer color="elegant-color">
-                    Contact information
-
-                    Mud Buddy| 7956 S. 1530 W.| West Jordan, Utah 84088
-                    (801) 352-8011
-                    email: Clinth@mudbuddy.com
-                    Request Information
-                </Footer>
-
             </div>
         );
     }

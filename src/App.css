@@ -1,5 +1,10 @@
-.App {
+.Nav {
   text-align: center;
+  min-height: 100px;
+  color: white;
+  word-spacing: normal;
+  background: black;
+
 }
 
 .App-logo {
@@ -27,9 +32,7 @@
   to { transform: rotate(360deg); }
 }
 
-.navbar-ht {
-  height: 100px;
-}
+
 iframe {
   display: block;       /* iframes are inline by default */
   background: #000;
